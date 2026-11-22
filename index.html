@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f8fc">
+<meta name="description" content="Sales Intelligence — add conversations, then research customer insights with verified evidence.">
+<title>Sales Intelligence · AI Research</title>
+<style>
+:root{color-scheme:light;--ink:#15233d;--muted:#6c7890;--line:#e2e7ef;--bg:#f7f8fc;--blue:#375be8;--blue2:#2345c3;--white:#fff;--mint:#e7f8f0;--green:#087d57;--red:#bd3854;--shadow:0 12px 42px rgba(28,46,94,.055)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}a{color:var(--blue)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #92a8ff;outline-offset:2px}
+.shell{min-height:100vh;display:flex;flex-direction:column}.top{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.topinner{max-width:1140px;margin:auto;min-height:78px;padding:12px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px;color:#162544;text-decoration:none}.brandmark{width:37px;height:37px;border-radius:12px;background:#2847bb;display:grid;place-items:center;color:#fff;box-shadow:0 7px 15px #264cbb25}.brandmark svg{width:23px;height:23px}.brand strong{font-size:15px;display:block;letter-spacing:-.5px}.brand small{display:block;font-size:11px;color:var(--muted);line-height:1}.tabs{display:flex;align-items:center;gap:5px;background:#f1f4fb;border:1px solid #e6eaf3;border-radius:12px;padding:4px}.tab{border:0;background:transparent;color:#687790;padding:10px 16px;border-radius:9px;font-weight:700;white-space:nowrap;display:flex;align-items:center;gap:8px}.tab svg{width:17px;height:17px}.tab.active{background:#fff;color:#233e9b;box-shadow:0 2px 8px #16274c14}.status{font-size:11px;font-weight:700;color:#697792;display:flex;align-items:center;gap:7px;white-space:nowrap}.status::before{content:"";width:7px;height:7px;border-radius:50%;background:#e7aa51}.status.ready::before{background:#12a375}
+main{flex:1}.wrap{max-width:1140px;padding:40px 26px 80px;margin:auto}.hidden{display:none!important}.eyebrow{text-transform:uppercase;font-size:11px;font-weight:850;letter-spacing:1.5px;color:#5270ce}.page-title{font-size:clamp(29px,4.5vw,43px);letter-spacing:-1.65px;line-height:1.13;margin:9px 0 12px;font-weight:790}.page-desc{font-size:14px;color:var(--muted);max-width:630px;margin:0}.pagehead{margin:0 0 27px}.line{border:1px solid var(--line);background:var(--white);border-radius:18px;box-shadow:var(--shadow)}.panel{padding:24px}.label{display:block;font-size:12px;font-weight:750;color:#374967;margin-bottom:7px}.field{width:100%;border:1px solid #dce3ef;border-radius:11px;background:white;color:var(--ink);padding:11px 13px;min-height:44px;outline:none;transition:.15s}.field:focus{border-color:#5877e2;box-shadow:0 0 0 3px #dce4ff}.field::placeholder{color:#9aa6ba}textarea.field{resize:vertical;line-height:1.65}textarea::placeholder{color:#9ba8b9}.hint{font-size:11px;color:#8491a7;margin-top:6px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.full{grid-column:1/-1}.btn{border:1px solid transparent;background:var(--blue);color:white;min-height:43px;border-radius:10px;padding:10px 17px;font-size:13px;font-weight:750;display:inline-flex;justify-content:center;align-items:center;gap:9px;transition:.15s}.btn:hover:not(:disabled){background:var(--blue2)}.btn.outline{background:#fff;border-color:#dbe3ed;color:#3a4f74}.btn.outline:hover{background:#f5f8ff}.btn svg{width:17px;height:17px}.btn.small{min-height:34px;padding:7px 11px;font-size:11px}.muted{color:var(--muted)}
+.ask-layout{display:grid;grid-template-columns:minmax(0,1fr) 272px;gap:20px;align-items:start}.chat{min-height:565px;display:flex;flex-direction:column;overflow:hidden}.chathead{padding:17px 21px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:center}.chathead strong{font-size:14px}.chathead span{font-size:11px;color:var(--muted)}.messages{padding:23px;flex:1;display:flex;flex-direction:column;gap:19px;min-height:335px;max-height:65vh;overflow-y:auto}.welcome{margin:auto;text-align:center;max-width:420px;padding:15px}.welcomeicon{height:56px;width:56px;background:#edf1ff;border-radius:18px;margin:0 auto 15px;display:grid;place-items:center;color:var(--blue)}.welcomeicon svg{width:27px;height:27px}.welcome h2{font-size:21px;letter-spacing:-.5px;margin:0 0 8px}.welcome p{color:var(--muted);font-size:13px;margin:0}.samples{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:20px}.sample{border:1px solid #dfe5f1;border-radius:999px;padding:8px 12px;background:#fff;font-size:11px;color:#536784;font-weight:650}.sample:hover{border-color:#91a5ec;color:var(--blue)}.msg.user{align-self:flex-end;background:#e9efff;border-radius:15px 15px 4px 15px;padding:12px 15px;max-width:82%;white-space:pre-wrap;overflow-wrap:anywhere}.msg.assistant{align-self:stretch;background:#fbfcff;border:1px solid #e7ebf4;border-radius:13px;padding:18px 19px;max-width:100%;overflow-wrap:anywhere}.msg.assistant.loading{color:var(--muted);font-style:italic}.msg.assistant h2{font-size:15px;margin:20px 0 9px;letter-spacing:-.2px}.msg.assistant h2:first-child{margin-top:0}.msg.assistant h3{font-size:13px;margin:17px 0 8px}.msg.assistant p{margin:8px 0;line-height:1.72}.msg.assistant ul{padding-left:21px;margin:7px 0}.msg.assistant li{margin:7px 0}.msg.assistant blockquote{border-left:3px solid #afc0ff;margin:10px 0;padding-left:13px;color:#526581}.msg.assistant .citation{font-weight:750;color:var(--blue);text-decoration:none;background:#e8eeff;padding:1px 5px;border-radius:5px}.msg.assistant code{font:12px ui-monospace,Menlo,monospace;background:#eef2f7;padding:1px 5px;border-radius:5px}.message-meta{font-size:11px;color:#7b89a0;margin-top:14px;padding-top:11px;border-top:1px solid #e5eaf2}.promptarea{padding:14px 19px 18px;border-top:1px solid var(--line);background:#fff}.promptrow{display:flex;align-items:flex-end;gap:9px}.prompt{min-height:65px;max-height:190px}.send{height:44px;min-width:47px;flex-shrink:0;padding:0}.underprompt{display:flex;justify-content:space-between;gap:10px;align-items:center;color:#8a96a9;font-size:11px;padding-top:10px}.rightcol{display:flex;flex-direction:column;gap:15px}.sideheader{font-size:13px;font-weight:790;display:flex;justify-content:space-between;gap:9px;align-items:center}.sidecopy{font-size:12px;color:var(--muted);margin:8px 0 0}.toggle{border:0;background:none;padding:0;color:var(--blue);font-size:11px;font-weight:750}.mini-grid{display:grid;gap:11px;margin-top:16px}.mini-grid label{font-weight:700;color:#53617b;font-size:11px;display:block;margin-bottom:5px}.mini-grid .field{min-height:38px;font-size:12px;padding:8px 10px}.sources{display:flex;flex-direction:column;gap:9px;margin-top:12px}.source{border:1px solid #e4e9f2;background:#fcfdff;border-radius:11px;padding:11px;scroll-margin:95px}.source:target{outline:2px solid #91a6ff}.source-title{font-size:11px;font-weight:780;color:#263a61;display:flex;justify-content:space-between;gap:9px;align-items:center}.source-type{font-size:9px;color:#697b96;display:inline-block;background:#edf1f9;padding:2px 5px;border-radius:4px}.source-quote{font-size:11px;color:#566780;margin:8px 0 0;line-height:1.65;overflow-wrap:anywhere}.source-ref{font-size:10px;color:#8d9aab;margin-top:7px}.sidefoot{padding:16px 18px;background:#eef4ff;border:1px solid #dae6ff;border-radius:13px;color:#4c648d;font-size:11px}.sidefoot strong{display:block;font-size:12px;color:#304d87;margin-bottom:5px}.suc{border:1px solid #bce7d6;color:#186b50;background:#edf9f3;padding:13px 15px;border-radius:12px;margin-bottom:20px;font-size:13px}.err{border:1px solid #f0c5ce;color:#a4314a;background:#fff2f4;padding:13px 15px;border-radius:12px;margin-bottom:20px;font-size:13px}
+.add-layout{display:grid;grid-template-columns:minmax(0,1fr) 265px;gap:20px;align-items:start}.formhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:19px}.formhead h2{font-size:16px;margin:0}.formhead span{font-size:11px;color:#8b98ac}.divider{height:1px;background:var(--line);margin:20px 0}.form-actions{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:23px}.detail{border-top:1px solid var(--line);padding-top:14px}.detail summary{cursor:pointer;font-size:12px;font-weight:750;color:#475c81;user-select:none}.detail[open] summary{margin-bottom:17px}.notehint{background:#fff9ed;border:1px solid #f0e3c8;padding:11px 13px;border-radius:10px;color:#8b6b35;font-size:11px;margin-top:8px}.steps{list-style:none;margin:13px 0 0;padding:0;display:grid;gap:15px}.steps li{display:flex;gap:10px;font-size:12px;color:#62718a}.num{width:26px;height:26px;flex:none;display:grid;place-items:center;background:#eaf0ff;color:#2f54cb;border-radius:9px;font-weight:800;font-size:11px}.steps b{display:block;color:#253958;font-size:12px;margin-bottom:3px}.footer{border-top:1px solid var(--line);color:#97a0b1;text-align:center;padding:15px 20px;font-size:11px}.saving{opacity:.8}
+@media(max-width:960px){.topinner{flex-wrap:wrap}.status{display:none}.ask-layout,.add-layout{grid-template-columns:1fr}.rightcol{display:grid;grid-template-columns:1fr 1fr}.rightcol>.panel:nth-child(2){grid-column:2}.sidefoot{grid-column:1/-1}}
+@media(max-width:630px){.topinner{padding:11px 15px;min-height:66px}.brand small{display:none}.brand strong{font-size:13px}.tabs{gap:0}.tab{padding:9px 10px;font-size:12px}.tab svg{width:15px;height:15px}.wrap{padding:27px 15px 50px}.pagehead{margin-bottom:21px}.page-title{font-size:31px}.panel{padding:18px}.chat{min-height:580px}.messages{padding:15px}.rightcol,.grid{grid-template-columns:1fr}.rightcol>.panel:nth-child(2){grid-column:auto}.full{grid-column:1}.form-actions{flex-wrap:wrap}.form-actions .btn{width:100%}.underprompt{font-size:10px}.msg.user{max-width:92%}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><div class="topinner">
+  <a href="#ask" class="brand" aria-label="Sales Intelligence home"><span class="brandmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m4 17 6-6 4 3 6-8"/><path d="M15 6h5v5"/></svg></span><span><strong>Sales Intelligence</strong><small>Evidence-grounded AI</small></span></a>
+  <nav class="tabs" aria-label="Main navigation"><button type="button" id="tabAsk" class="tab active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 3v-8.5a7.5 7.5 0 1 1 17-2z"/></svg>Ask AI</button><button type="button" id="tabAdd" class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add conversation</button></nav>
+  <span id="connectionStatus" class="status">Portfolio demo</span>
+</div></header>
+<main>
+<section id="pageAsk" class="wrap">
+ <div class="pagehead"><div class="eyebrow">Research workspace</div><h1 class="page-title">Ask your conversations anything.</h1><p class="page-desc">Find customer pain points, requests, objections and trends—backed by the actual words in your stored conversations.</p></div>
+ <div class="ask-layout">
+  <div class="line chat">
+   <div class="chathead"><strong>Research assistant</strong><span>Answers grounded in transcripts</span></div>
+   <div id="messages" class="messages" aria-live="polite"><div id="welcome" class="welcome"><div class="welcomeicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 5h18v12H8l-5 4V5z"/><path d="M7.5 10h9M7.5 14h6"/></svg></div><h2>What would you like to discover?</h2><p>Ask a question across your sales conversations. The AI will retrieve relevant evidence and show its sources.</p><div class="samples"><button type="button" class="sample" data-question="What are the most common customer pain points?">Top customer pain points</button><button type="button" class="sample" data-question="Which features do customers request most often?">Feature requests</button><button type="button" class="sample" data-question="What objections or concerns did customers raise?">Sales objections</button></div></div></div>
+   <form id="askForm" class="promptarea"><div class="promptrow"><textarea id="question" class="field prompt" rows="2" required maxlength="1000" aria-label="Research question" placeholder="Ask a question about your stored conversations..."></textarea><button id="askButton" type="submit" class="btn send" aria-label="Send question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14-7-7 14-2-7-5-2z"/></svg></button></div><div class="underprompt"><span>Evidence only · No internet research</span><span>Enter to ask · Shift+Enter for new line</span></div></form>
+  </div>
+  <aside class="rightcol">
+   <div class="line panel"><div class="sideheader">Verified sources <span id="sourceCount" class="muted">0</span></div><p class="sidecopy" id="sourceIntro">Sources from your latest answer appear here, with speaker, timestamp, and original quote.</p><div id="sourceList" class="sources"></div></div>
+   <div class="sidefoot"><strong>Grounded, not guessed</strong>The assistant searches the demo workspace, checks transcript quotes, and labels internal notes separately.</div>
+  </aside>
+ </div>
+</section>
+<section id="pageAdd" class="wrap hidden">
+ <div class="pagehead"><div class="eyebrow">Knowledge base</div><h1 class="page-title">Add a conversation.</h1><p class="page-desc">Save the original transcript and optional sales context separately. Once indexed, the conversation becomes available to the research assistant.</p></div>
+ <div class="add-layout">
+  <div><div id="saveBanner" class="hidden" role="status"></div>
+  <form id="conversationForm" class="line panel"><div class="formhead"><h2>Conversation details</h2><button type="button" class="btn small outline" id="loadExample">Use sample conversation</button></div>
+   <div class="grid"><div><label class="label" for="company">Company name *</label><input class="field" id="company" name="company_name" required maxlength="160" placeholder="e.g. Demo Logistics"></div><div><label class="label" for="industry">Industry *</label><input class="field" id="industry" name="industry" required maxlength="120" placeholder="e.g. Logistics"></div>
+    <div class="full"><label class="label" for="transcript">Original conversation transcript *</label><textarea class="field" id="transcript" name="transcript" required rows="11" maxlength="20000" minlength="200" placeholder="[00:01:00] Sarah (Sales): What challenges are you facing?&#10;[00:01:15] John (Customer): Our team spends hours collecting competitor information manually..."></textarea><div class="hint">Paste at least 200 characters, with speaker names and timestamps when available. Or <label for="textFile" style="color:var(--blue);cursor:pointer;font-weight:750">upload a .txt/.md file</label> to fill this field. <input id="textFile" type="file" accept=".txt,.md,text/plain,text/markdown" hidden></div></div>
+    <div class="full"><label class="label" for="notes">Sales comments / additional context</label><textarea class="field" id="notes" name="notes" rows="4" maxlength="3000" placeholder="Your observations, next steps, account context, or other internal notes..."></textarea><div class="notehint">Internal notes are stored separately and never presented as something a customer said.</div></div>
+   </div>
+   <div class="form-actions"><span class="muted" style="font-size:11px">Only synthetic demo conversations. Original transcript and notes stay separate.</span><button id="saveBtn" type="submit" class="btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Save conversation</button></div>
+  </form></div>
+  <aside class="rightcol"><div class="line panel"><div class="sideheader">How it works</div><ol class="steps"><li><span class="num">1</span><span><b>Add conversation</b>Paste the original meeting transcript and any optional internal context.</span></li><li><span class="num">2</span><span><b>Automatic indexing</b>n8n stores the text in Supabase and generates searchable embeddings.</span></li><li><span class="num">3</span><span><b>Ask AI</b>Research across saved conversations and inspect verified quotes.</span></li></ol></div><div class="sidefoot"><strong>For a portfolio demo</strong>Use synthetic example conversations. Publicly hosted HTML must never contain Supabase service keys or n8n shared secrets.</div></aside>
+ </div>
+</section>
+</main><footer class="footer">Sales Intelligence · AI-powered customer research · Portfolio project</footer>
+</div>
+<script>
+'use strict';
+// One-time setup: paste the URL of a PUBLIC, RATE-LIMITED, SYNTHETIC-DATA-ONLY n8n gateway.
+// It must support actions research.ask and conversations.ingest as specified in the setup guide.
+// NEVER place X-SI-Key, a Supabase service-role key, or a private access token in this file.
+const PUBLIC_DEMO_GATEWAY_URL = 'https://hipa.app.n8n.cloud/webhook/cv-portfolio-demo';
+
+const $ = s => document.querySelector(s);
+const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const sessionId = (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
+let busy = false;
+function showPage(page){
+  const isAsk = page !== 'add';
+  $('#pageAsk').classList.toggle('hidden',!isAsk);$('#pageAdd').classList.toggle('hidden',isAsk);
+  $('#tabAsk').classList.toggle('active',isAsk);$('#tabAdd').classList.toggle('active',!isAsk);
+  $('#tabAsk').setAttribute('aria-current',isAsk?'page':'false');$('#tabAdd').setAttribute('aria-current',isAsk?'false':'page');
+  document.title=`${isAsk?'Ask AI':'Add Conversation'} · Sales Intelligence`;
+  if(location.hash !== (isAsk?'#ask':'#add')) history.replaceState(null,'',isAsk?'#ask':'#add');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+$('#tabAsk').onclick=()=>showPage('ask');$('#tabAdd').onclick=()=>showPage('add');
+window.addEventListener('hashchange',()=>showPage(location.hash==='#add'?'add':'ask'));
+showPage(location.hash==='#add'?'add':'ask');
+if(PUBLIC_DEMO_GATEWAY_URL.trim()){$('#connectionStatus').textContent='Demo API configured';}
+function errorMessage(err){return err instanceof Error ? err.message : String(err);}
+async function sendAction(action,payload){
+  const url=PUBLIC_DEMO_GATEWAY_URL.trim();
+  if(!url)throw new Error('The demo API is not configured.');
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),185000);
+  try{
+    // Flat JSON contract expected by the public, demo-only gateway.
+    // No API keys or credentials are ever sent by this static HTML.
+    const response=await fetch(url,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({action,...payload}),
+      signal:controller.signal,
+      cache:'no-store',
+      credentials:'omit'
+    });
+    let json;
+    try{json=await response.json();}
+    catch{throw new Error(`The API returned HTTP ${response.status} without JSON. Check the gateway workflow.`);}
+    if(!response.ok||json.ok===false){
+      const retry=json.retry_after?` Try again in ${json.retry_after} seconds.`:'';
+      throw new Error(String(json.error||json.message||`API error (${response.status})`)+retry);
+    }
+    return json.data??json;
+  }catch(err){
+    if(err.name==='AbortError')throw new Error('The research timed out. Try a shorter question.');
+    if(err instanceof TypeError)throw new Error('The demo API is unavailable. The n8n gateway may need to be published or its CORS settings fixed.');
+    throw err;
+  }finally{clearTimeout(timeout);}
+}
+function pushUser(text){const el=document.createElement('div');el.className='msg user';el.textContent=text;$('#messages').appendChild(el);el.scrollIntoView({block:'end'});}
+function safeInline(s,scope){
+  let h=escapeHTML(s);h=h.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');h=h.replace(/`([^`]+)`/g,'<code>$1</code>');
+  return h.replace(/\[([A-Za-z]\d+)\]/g,(_,id)=>`<a class="citation" href="#source-${scope}-${id}">[${id}]</a>`);
+}
+function safeMarkdown(md,scope){
+  const lines=String(md||'').split(/\r?\n/), out=[];let list=[];
+  const flush=()=>{if(list.length){out.push('<ul>'+list.join('')+'</ul>');list=[];}};
+  for(const l of lines){const s=l.trim();if(!s){flush();continue;}
+    if(s.startsWith('## ')){flush();out.push('<h2>'+safeInline(s.slice(3),scope)+'</h2>');}
+    else if(s.startsWith('### ')){flush();out.push('<h3>'+safeInline(s.slice(4),scope)+'</h3>');}
+    else if(/^[-*] /.test(s)){list.push('<li>'+safeInline(s.slice(2),scope)+'</li>');}
+    else if(s.startsWith('> ')){flush();out.push('<blockquote>'+safeInline(s.slice(2),scope)+'</blockquote>');}
+    else {flush();out.push('<p>'+safeInline(s,scope)+'</p>');}
+  }flush();return out.join('');
+}
+function getSources(d){const raw=d.sources||d.citations||[];return Array.isArray(raw)?raw.filter(s=>s && s.verified===true):[];}
+function updateSources(sources,scope){
+  $('#sourceCount').textContent=String(sources.length);
+  $('#sourceIntro').textContent=sources.length?'Verified citations from the latest answer. Click a reference in the report to jump here.':'No verified transcript references returned for this answer.';
+  $('#sourceList').innerHTML=sources.map((c,i)=>{
+    const id=String(c.id||`C${i+1}`),type=String(c.source_type||'transcript');
+    const who=[c.company_name,c.speaker,c.start_timestamp].filter(Boolean).map(escapeHTML).join(' · ');
+    return `<article class="source" id="source-${escapeHTML(scope)}-${escapeHTML(id)}"><div class="source-title"><span>[${escapeHTML(id)}] ${escapeHTML(c.company_name||'Conversation')}</span><span class="source-type">${type==='internal_note'?'Internal note':'Transcript'}</span></div><div class="source-ref">${who}</div><p class="source-quote">“${escapeHTML(c.quote||'')}”</p><div class="source-ref">Conversation: ${escapeHTML(c.conversation_id||'N/A')}</div></article>`;
+  }).join('');
+}
+function pushAnswer(answer,meta={}){
+  const el=document.createElement('article');el.className='msg assistant';
+  const scope=String(Date.now());el.innerHTML=safeMarkdown(answer,scope);
+  const coverage=meta.coverage||{};const texts=[];
+  if(Number.isFinite(+coverage.matching))texts.push(`${coverage.matching} matching`);
+  if(Number.isFinite(+coverage.examined))texts.push(`${coverage.examined} examined`);
+  if(Number.isFinite(+coverage.supporting))texts.push(`${coverage.supporting} supporting`);
+  if(texts.length){const d=document.createElement('div');d.className='message-meta';d.textContent='Research coverage · '+texts.join(' · ');el.appendChild(d);}
+  $('#messages').appendChild(el);el.scrollIntoView({block:'end'});updateSources(getSources(meta),scope);
+}
+function setAskBusy(value){busy=value;$('#askButton').disabled=value;$('#question').disabled=value;}
+async function ask(text){if(busy)return;const q=String(text??$('#question').value).trim();if(!q)return;if(q.length<3){pushAnswer("Please enter a question with at least 3 characters.");return;}if(q.length>1000){pushAnswer("Questions must be under 1,000 characters.");return;}
+  $('#welcome')?.remove();$('#question').value='';pushUser(q);setAskBusy(true);
+  const load=document.createElement('div');load.className='msg assistant loading';load.textContent='Searching stored conversations and verifying sources…';$('#messages').appendChild(load);load.scrollIntoView({block:'end'});
+  try{const data=await sendAction('research.ask',{question:q,session_id:sessionId});
+    load.remove();const report=(data.result&&typeof data.result==='object')?data.result:data;
+    const answer=report.answer_markdown||report.answer||report.sections?.executive_summary;
+    if(!answer)throw new Error('The research agent returned no answer.');pushAnswer(String(answer),report);
+  }catch(e){load.remove();pushAnswer('Research failed: '+errorMessage(e));}finally{setAskBusy(false);$('#question').focus();}
+}
+$('#askForm').onsubmit=e=>{e.preventDefault();ask();};$('#question').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask();}});
+document.querySelectorAll('[data-question]').forEach(b=>b.onclick=()=>ask(b.dataset.question));
+
+$('#textFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;
+  if(file.size>2*1024*1024){alert('Please choose a text file under 2 MB.');e.target.value='';return;}
+  try{const text=await file.text();if(text.length>20000)throw new Error('That transcript exceeds the 20,000 character demo limit.');$('#transcript').value=text;}catch(err){alert(err.message||'Could not read the selected file.');}finally{e.target.value='';}
+});
+// One click generates a synthetic conversation long enough to pass API validation.
+$('#loadExample').onclick=()=>{
+  $('#company').value='Portfolio Demo Logistics';
+  $('#industry').value='Logistics';
+  $('#transcript').value=[
+    '[00:00:10] Alex (Customer): Our dispatch team spends four hours every day planning deliveries with spreadsheets and calling drivers. A single traffic disruption can force us to redo the routes manually.',
+    '[00:00:35] Sam (Sales): What would improve your current dispatch process?',
+    '[00:00:45] Alex (Customer): Automatic route planning, delay alerts and a weekly operations summary would help a lot. We need to notify drivers faster when schedules change.'
+  ].join('\n');
+  $('#notes').value='Synthetic portfolio example. Sales representative thinks automated dispatch alerts are a strong opportunity.';
+  $('#transcript').focus();
+};
+$('#conversationForm').onsubmit=async e=>{
+  e.preventDefault();
+  if(busy)return;
+  const company=$('#company').value.trim();
+  const industry=$('#industry').value.trim();
+  const transcript=$('#transcript').value.trim();
+  const internal_notes=$('#notes').value.trim();
+  if(!company||!industry||!transcript)return;
+  if(transcript.length<200||transcript.length>20000){
+    $('#saveBanner').className='err';
+    $('#saveBanner').textContent='Transcript must contain 200–20,000 characters. Use the sample conversation to try the app.';
+    return;
+  }
+  $('#saveBanner').className='hidden';
+  busy=true;$('#saveBtn').disabled=true;$('#saveBtn').textContent='Saving and indexing…';
+  try{
+    const raw=await sendAction('conversations.ingest',{company,industry,transcript,internal_notes});
+    const data=(raw.result&&typeof raw.result==='object')?raw.result:raw;
+    const id=data.conversation_id||raw.conversation_id||'';
+    const count=data.indexed_chunks??raw.indexed_chunks;
+    const status=data.status||raw.status||'';
+    if(!id&&!data.ok&&!raw.ok)throw new Error('No conversation confirmation was returned.');
+    $('#saveBanner').className='suc';
+    $('#saveBanner').replaceChildren();
+    const strong=document.createElement('strong');
+    strong.textContent='Conversation saved.';
+    $('#saveBanner').appendChild(strong);
+    $('#saveBanner').appendChild(document.createTextNode(` ${id?'ID: '+id+'.':''} ${count!=null?'Indexed chunks: '+count+'.':''} ${status?'Status: '+status+'.':''} `));
+    const action=document.createElement('button');
+    action.type='button';action.className='btn small outline';
+    action.style.marginLeft='9px';action.textContent='Ask AI now';
+    action.onclick=()=>{
+      showPage('ask');
+      $('#question').value=`What challenges did ${company} describe?`;
+      $('#question').focus();
+    };
+    $('#saveBanner').appendChild(action);
+    e.target.reset();window.scrollTo({top:0,behavior:'smooth'});
+  }catch(err){
+    $('#saveBanner').className='err';
+    $('#saveBanner').textContent='Could not save conversation: '+errorMessage(err);
+    $('#saveBanner').scrollIntoView({block:'center'});
+  }finally{
+    busy=false;$('#saveBtn').disabled=false;
+    $('#saveBtn').textContent='Save conversation';
+  }
+};
+
+</script>
+</body></html>
