@@ -16,6 +16,15 @@ main{flex:1}.wrap{max-width:1140px;padding:40px 26px 80px;margin:auto}.hidden{di
 .add-layout{display:grid;grid-template-columns:minmax(0,1fr) 265px;gap:20px;align-items:start}.formhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:19px}.formhead h2{font-size:16px;margin:0}.formhead span{font-size:11px;color:#8b98ac}.divider{height:1px;background:var(--line);margin:20px 0}.form-actions{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:23px}.detail{border-top:1px solid var(--line);padding-top:14px}.detail summary{cursor:pointer;font-size:12px;font-weight:750;color:#475c81;user-select:none}.detail[open] summary{margin-bottom:17px}.notehint{background:#fff9ed;border:1px solid #f0e3c8;padding:11px 13px;border-radius:10px;color:#8b6b35;font-size:11px;margin-top:8px}.steps{list-style:none;margin:13px 0 0;padding:0;display:grid;gap:15px}.steps li{display:flex;gap:10px;font-size:12px;color:#62718a}.num{width:26px;height:26px;flex:none;display:grid;place-items:center;background:#eaf0ff;color:#2f54cb;border-radius:9px;font-weight:800;font-size:11px}.steps b{display:block;color:#253958;font-size:12px;margin-bottom:3px}.footer{border-top:1px solid var(--line);color:#97a0b1;text-align:center;padding:15px 20px;font-size:11px}.saving{opacity:.8}
 @media(max-width:960px){.topinner{flex-wrap:wrap}.status{display:none}.ask-layout,.add-layout{grid-template-columns:1fr}.rightcol{display:grid;grid-template-columns:1fr 1fr}.rightcol>.panel:nth-child(2){grid-column:2}.sidefoot{grid-column:1/-1}}
 @media(max-width:630px){.topinner{padding:11px 15px;min-height:66px}.brand small{display:none}.brand strong{font-size:13px}.tabs{gap:0}.tab{padding:9px 10px;font-size:12px}.tab svg{width:15px;height:15px}.wrap{padding:27px 15px 50px}.pagehead{margin-bottom:21px}.page-title{font-size:31px}.panel{padding:18px}.chat{min-height:580px}.messages{padding:15px}.rightcol,.grid{grid-template-columns:1fr}.rightcol>.panel:nth-child(2){grid-column:auto}.full{grid-column:1}.form-actions{flex-wrap:wrap}.form-actions .btn{width:100%}.underprompt{font-size:10px}.msg.user{max-width:92%}}
+
+/* Polished research interactions */
+.msg-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid #e8edf6}.message-tools{display:flex;gap:6px;flex-wrap:wrap}.text-tool{border:1px solid #e1e7f3;background:#fff;color:#55698c;padding:6px 9px;border-radius:8px;font-size:11px;font-weight:750;display:inline-flex;align-items:center;gap:6px}.text-tool:hover{background:#eef3ff;color:#294fc4}.result-label{font-size:11px;font-weight:800;color:#425b93}.msg.user{position:relative;padding-bottom:9px}.msg.user .user-content{font-size:13px;line-height:1.65;white-space:pre-wrap}.user-tools{display:flex;justify-content:flex-end;margin-top:6px}.user-tools .text-tool{border-color:#d6e0f7;background:transparent;color:#5171ad;padding:4px 6px}.user-tools .text-tool:hover{background:#dbe5ff}
+.msg.assistant.loading-card{border-color:#d8e3fa;background:linear-gradient(145deg,#fcfdff,#f5f8ff);padding:20px;font-style:normal;position:relative;overflow:hidden}.loading-head{display:flex;align-items:center;gap:12px}.loader-spinner{height:36px;width:36px;border:3px solid #dbe5fd;border-top-color:#375be8;border-radius:50%;animation:spin .85s linear infinite;flex:none}@keyframes spin{to{transform:rotate(360deg)}}.working-title{font-size:14px;color:#253b6f;font-weight:800}.working-subtitle{font-size:12px;color:#7888a5;margin-top:3px}.loading-skeleton{display:grid;gap:9px;margin-top:20px}.skeleton-line{height:10px;border-radius:8px;background:linear-gradient(90deg,#e8edf8 15%,#f5f8fd 45%,#e8edf8 75%);background-size:210% 100%;animation:shimmer 1.6s ease infinite}.skeleton-line:nth-child(1){width:85%}.skeleton-line:nth-child(2){width:96%}.skeleton-line:nth-child(3){width:62%}@keyframes shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}.loading-foot{margin-top:16px;font-size:11px;color:#8090aa;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.answer-style{display:flex;align-items:center;gap:6px;font-size:11px;color:#647492;font-weight:700}.answer-style select{border:1px solid #e0e7f3;background:#f7f9fd;color:#344e81;border-radius:7px;padding:5px 8px;min-height:28px;cursor:pointer}.underprompt{flex-wrap:wrap}.source-actions{display:flex;align-items:center;gap:6px}.source .text-tool{padding:3px 6px;font-size:10px}
+.integration-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;margin-bottom:16px;background:linear-gradient(120deg,#f4f7ff,#fff)}.integration-card h2{margin:6px 0 5px;font-size:15px;letter-spacing:-.25px}.integration-card p{font-size:12px;color:#6f7f98;margin:0;max-width:540px}.integration-card .eyebrow{font-size:10px}.integration-card .btn{flex-shrink:0}.preview-chip{font-size:10px;border:1px solid #dae3f2;background:#f0f4fc;border-radius:99px;padding:3px 9px;color:#58709d;font-weight:800;display:inline-block}
+.connector-modal{border:1px solid #e1e7f2;border-radius:18px;box-shadow:0 30px 100px #14264c40;padding:0;width:min(550px,calc(100vw - 28px));max-height:90vh;overflow:auto;color:var(--ink)}.connector-modal::backdrop{background:#14254491;backdrop-filter:blur(3px)}.modal-body{padding:26px}.modal-top{display:flex;justify-content:space-between;gap:14px;align-items:start}.modal-top h2{font-size:22px;letter-spacing:-.6px;margin:4px 0 7px}.modal-desc{font-size:13px;color:#64738d;margin:3px 0 22px}.modal-close{background:#f2f5fb;border:0;border-radius:9px;padding:7px 11px;font-weight:750;color:#4b638c}.connector-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.connector-option{text-align:left;display:flex;align-items:center;gap:11px;border:1px solid #dce5f2;background:white;padding:12px;border-radius:12px}.connector-option:hover,.connector-option.selected{border-color:#6581dc;background:#f5f8ff}.connector-icon{height:34px;width:34px;border-radius:10px;background:#edf2ff;color:#3355c2;display:grid;place-items:center;font-size:12px;font-weight:900;flex:none}.connector-option strong{display:block;font-size:12px;color:#2c3e61}.connector-option small{display:block;font-size:10px;color:#8b99ae}.integration-preview{margin-top:17px;background:#f4f7fd;border:1px solid #e1e8f4;border-radius:11px;padding:14px;font-size:12px;color:#526586;line-height:1.6}.integration-preview strong{display:block;color:#344d78;margin-bottom:3px}.modal-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:16px;font-size:11px;color:#8290a8}
+@media(max-width:630px){.integration-card{flex-direction:column;align-items:stretch;padding:18px}.integration-card .btn{width:100%}.connector-list{grid-template-columns:1fr}.modal-body{padding:20px}.underprompt .keyboard-hint{display:none}.message-tools .text-tool{font-size:10px;padding:5px 7px}}
+@media(prefers-reduced-motion:reduce){.loader-spinner,.skeleton-line{animation:none}}
 </style>
 </head>
 <body>
@@ -31,19 +40,19 @@ main{flex:1}.wrap{max-width:1140px;padding:40px 26px 80px;margin:auto}.hidden{di
  <div class="ask-layout">
   <div class="line chat">
    <div class="chathead"><strong>Research assistant</strong><span>Answers grounded in transcripts</span></div>
-   <div id="messages" class="messages" aria-live="polite"><div id="welcome" class="welcome"><div class="welcomeicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 5h18v12H8l-5 4V5z"/><path d="M7.5 10h9M7.5 14h6"/></svg></div><h2>What would you like to discover?</h2><p>Ask a question across your sales conversations. The AI will retrieve relevant evidence and show its sources.</p><div class="samples"><button type="button" class="sample" data-question="What are the most common customer pain points?">Top customer pain points</button><button type="button" class="sample" data-question="Which features do customers request most often?">Feature requests</button><button type="button" class="sample" data-question="What objections or concerns did customers raise?">Sales objections</button></div></div></div>
-   <form id="askForm" class="promptarea"><div class="promptrow"><textarea id="question" class="field prompt" rows="2" required maxlength="1000" aria-label="Research question" placeholder="Ask a question about your stored conversations..."></textarea><button id="askButton" type="submit" class="btn send" aria-label="Send question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14-7-7 14-2-7-5-2z"/></svg></button></div><div class="underprompt"><span>Evidence only · No internet research</span><span>Enter to ask · Shift+Enter for new line</span></div></form>
+   <div id="messages" class="messages" aria-live="polite"><div id="welcome" class="welcome"><div class="welcomeicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 5h18v12H8l-5 4V5z"/><path d="M7.5 10h9M7.5 14h6"/></svg></div><h2>What would you like to discover?</h2><p>Ask a question across your sales conversations. The AI will retrieve relevant evidence and show its sources.</p><div class="samples"><button type="button" class="sample" data-question="What are the most common customer pain points?">Top customer pain points</button><button type="button" class="sample" data-question="Which features do customers request most often?">Feature requests</button><button type="button" class="sample" data-question="What objections or concerns did customers raise?">Sales objections</button><button type="button" class="sample" data-question="Give a comprehensive sales intelligence report across the stored conversations. Cover customer pain points, jobs to be done, requested features, objections, decision makers, budget, success criteria, and sales opportunities wherever evidence exists, with source quotations.">Full research report</button></div></div></div>
+   <form id="askForm" class="promptarea"><div class="promptrow"><textarea id="question" class="field prompt" rows="2" required maxlength="1000" aria-label="Research question" placeholder="Ask a question about your stored conversations..."></textarea><button id="askButton" type="submit" class="btn send" aria-label="Send question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 14-7-7 14-2-7-5-2z"/></svg></button></div><div class="underprompt"><label class="answer-style" for="answerStyle">Answer detail <select id="answerStyle"><option value="detailed" selected>Detailed</option><option value="focused">Focused</option></select></label><span>Evidence only · No internet research</span><span class="keyboard-hint">Enter to ask · Shift+Enter for new line</span></div></form>
   </div>
   <aside class="rightcol">
    <div class="line panel"><div class="sideheader">Verified sources <span id="sourceCount" class="muted">0</span></div><p class="sidecopy" id="sourceIntro">Sources from your latest answer appear here, with speaker, timestamp, and original quote.</p><div id="sourceList" class="sources"></div></div>
-   <div class="sidefoot"><strong>Grounded, not guessed</strong>The assistant searches the demo workspace, checks transcript quotes, and labels internal notes separately.</div>
+   <div class="sidefoot"><strong>Grounded, not guessed</strong>The assistant searches stored sample conversations, checks quotes, and labels internal notes separately.</div>
   </aside>
  </div>
 </section>
 <section id="pageAdd" class="wrap hidden">
  <div class="pagehead"><div class="eyebrow">Knowledge base</div><h1 class="page-title">Add a conversation.</h1><p class="page-desc">Save the original transcript and optional sales context separately. Once indexed, the conversation becomes available to the research assistant.</p></div>
  <div class="add-layout">
-  <div><div id="saveBanner" class="hidden" role="status"></div>
+  <div><div class="integration-card line"><div><span class="eyebrow">External sources · UI preview</span><h2>Import a meeting from your tools</h2><p>Bring sales calls and meeting transcripts into one place. This connection screen is a preview; imports are not enabled yet.</p></div><button type="button" class="btn outline" id="openConnect">Connect meeting tool <span aria-hidden="true">↗</span></button></div><div id="saveBanner" class="hidden" role="status"></div>
   <form id="conversationForm" class="line panel"><div class="formhead"><h2>Conversation details</h2><button type="button" class="btn small outline" id="loadExample">Use sample conversation</button></div>
    <div class="grid"><div><label class="label" for="company">Company name *</label><input class="field" id="company" name="company_name" required maxlength="160" placeholder="e.g. Demo Logistics"></div><div><label class="label" for="industry">Industry *</label><input class="field" id="industry" name="industry" required maxlength="120" placeholder="e.g. Logistics"></div>
     <div class="full"><label class="label" for="transcript">Original conversation transcript *</label><textarea class="field" id="transcript" name="transcript" required rows="11" maxlength="20000" minlength="200" placeholder="[00:01:00] Sarah (Sales): What challenges are you facing?&#10;[00:01:15] John (Customer): Our team spends hours collecting competitor information manually..."></textarea><div class="hint">Paste at least 200 characters, with speaker names and timestamps when available. Or <label for="textFile" style="color:var(--blue);cursor:pointer;font-weight:750">upload a .txt/.md file</label> to fill this field. <input id="textFile" type="file" accept=".txt,.md,text/plain,text/markdown" hidden></div></div>
@@ -54,7 +63,22 @@ main{flex:1}.wrap{max-width:1140px;padding:40px 26px 80px;margin:auto}.hidden{di
   <aside class="rightcol"><div class="line panel"><div class="sideheader">How it works</div><ol class="steps"><li><span class="num">1</span><span><b>Add conversation</b>Paste the original meeting transcript and any optional internal context.</span></li><li><span class="num">2</span><span><b>Automatic indexing</b>n8n stores the text in Supabase and generates searchable embeddings.</span></li><li><span class="num">3</span><span><b>Ask AI</b>Research across saved conversations and inspect verified quotes.</span></li></ol></div><div class="sidefoot"><strong>For a portfolio demo</strong>Use synthetic example conversations. Publicly hosted HTML must never contain Supabase service keys or n8n shared secrets.</div></aside>
  </div>
 </section>
-</main><footer class="footer">Sales Intelligence · AI-powered customer research · Portfolio project</footer>
+</main>
+<dialog id="connectorDialog" class="connector-modal" aria-labelledby="connectorDialogTitle">
+  <div class="modal-body">
+    <div class="modal-top"><div><span class="preview-chip">Interactive preview · No account connection</span><h2 id="connectorDialogTitle">Connect a meeting source</h2></div><button type="button" class="modal-close" id="closeConnect" aria-label="Close integration preview">✕</button></div>
+    <p class="modal-desc">Choose a source to see how automatic transcript import could work. These are presentation-only integrations; no authentication or data transfer occurs.</p>
+    <div class="connector-list">
+      <button class="connector-option" type="button" data-connector="Zoom"><span class="connector-icon">Z</span><span><strong>Zoom</strong><small>Meeting recordings and transcripts</small></span></button>
+      <button class="connector-option" type="button" data-connector="Google Meet"><span class="connector-icon">G</span><span><strong>Google Meet</strong><small>Recorded meeting transcripts</small></span></button>
+      <button class="connector-option" type="button" data-connector="Microsoft Teams"><span class="connector-icon">T</span><span><strong>Microsoft Teams</strong><small>Meeting recaps and transcripts</small></span></button>
+      <button class="connector-option" type="button" data-connector="Gong"><span class="connector-icon">Go</span><span><strong>Gong</strong><small>Sales conversation intelligence</small></span></button>
+    </div>
+    <div id="integrationPreview" class="integration-preview" aria-live="polite"><strong>Select a meeting tool</strong>See a preview of the possible integration. For now, use the working manual transcript form on this page.</div>
+    <div class="modal-footer"><span>Demo only · No access requested</span><button type="button" class="btn small outline" id="dismissConnect">Continue manually</button></div>
+  </div>
+</dialog>
+<footer class="footer">Sales Intelligence · AI-powered customer research · Portfolio project</footer>
 </div>
 <script>
 'use strict';
@@ -111,13 +135,60 @@ async function sendAction(action,payload){
     throw err;
   }finally{clearTimeout(timeout);}
 }
-function pushUser(text){const el=document.createElement('div');el.className='msg user';el.textContent=text;$('#messages').appendChild(el);el.scrollIntoView({block:'end'});}
+async function copyText(text,button){
+  try{
+    if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(String(text));}
+    else{
+      const helper=document.createElement('textarea');helper.value=String(text);helper.style.position='fixed';helper.style.opacity='0';document.body.appendChild(helper);helper.select();
+      if(!document.execCommand('copy'))throw new Error('Copy unavailable');helper.remove();
+    }
+    if(button){const old=button.textContent;button.textContent='Copied ✓';window.setTimeout(()=>{if(button.isConnected)button.textContent=old;},1500);}
+  }catch(e){window.alert('Could not copy automatically. Please select and copy the text manually.');}
+}
+function downloadMarkdown(text){
+  const blob=new Blob([String(text)],{type:'text/markdown;charset=utf-8'});
+  const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;
+  link.download='sales-intelligence-report-'+new Date().toISOString().slice(0,10)+'.md';
+  document.body.appendChild(link);link.click();link.remove();window.setTimeout(()=>URL.revokeObjectURL(url),2000);
+}
+function pushUser(text){
+  const el=document.createElement('div');el.className='msg user';
+  const content=document.createElement('div');content.className='user-content';content.textContent=text;
+  const actions=document.createElement('div');actions.className='user-tools';
+  const copy=document.createElement('button');copy.type='button';copy.className='text-tool';copy.textContent='Copy question';copy.setAttribute('aria-label','Copy your question');
+  copy.onclick=()=>copyText(text,copy);actions.appendChild(copy);el.append(content,actions);
+  $('#messages').appendChild(el);el.scrollIntoView({block:'end'});
+}
 function safeInline(s,scope){
   let h=escapeHTML(s);h=h.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');h=h.replace(/`([^`]+)`/g,'<code>$1</code>');
   return h.replace(/\[([A-Za-z]\d+)\]/g,(_,id)=>`<a class="citation" href="#source-${scope}-${id}">[${id}]</a>`);
 }
+// Omit entire empty sections rather than rendering "_No supported findings._" to marketers.
+function cleanReportMarkdown(md){
+  const lines=String(md||'').split(/\r?\n/),out=[];
+  const isFiller=s=>/^_?\s*No supported findings\.?\s*_?$/i.test(String(s||'').trim().replace(/\\_/g,'_'));
+  for(let i=0;i<lines.length;){
+    if(/^##\s+/.test(lines[i])){
+      let j=i+1;while(j<lines.length&&!/^##\s+/.test(lines[j]))j++;
+      const section=lines.slice(i+1,j).filter(l=>l.trim()&&!isFiller(l));
+      if(section.length){out.push(lines[i],...section,'');}
+      i=j;
+    }else{if(!isFiller(lines[i]))out.push(lines[i]);i++;}
+  }
+  return out.join('\n').trim();
+}
+function hideDuplicateCoverage(md){
+  const lines=String(md).split(/\r?\n/),out=[];
+  let skipping=false;
+  for(const line of lines){
+    if(/^##\s+Research coverage\s*$/i.test(line.trim())){skipping=true;continue;}
+    if(skipping && /^##\s+/.test(line))skipping=false;
+    if(!skipping)out.push(line);
+  }
+  return out.join('\n').trim();
+}
 function safeMarkdown(md,scope){
-  const lines=String(md||'').split(/\r?\n/), out=[];let list=[];
+  const lines=hideDuplicateCoverage(cleanReportMarkdown(md)).split(/\r?\n/), out=[];let list=[];
   const flush=()=>{if(list.length){out.push('<ul>'+list.join('')+'</ul>');list=[];}};
   for(const l of lines){const s=l.trim();if(!s){flush();continue;}
     if(s.startsWith('## ')){flush();out.push('<h2>'+safeInline(s.slice(3),scope)+'</h2>');}
@@ -128,18 +199,31 @@ function safeMarkdown(md,scope){
   }flush();return out.join('');
 }
 function getSources(d){const raw=d.sources||d.citations||[];return Array.isArray(raw)?raw.filter(s=>s && s.verified===true):[];}
+let currentSources=[];
 function updateSources(sources,scope){
+  currentSources=sources;
   $('#sourceCount').textContent=String(sources.length);
   $('#sourceIntro').textContent=sources.length?'Verified citations from the latest answer. Click a reference in the report to jump here.':'No verified transcript references returned for this answer.';
   $('#sourceList').innerHTML=sources.map((c,i)=>{
     const id=String(c.id||`C${i+1}`),type=String(c.source_type||'transcript');
     const who=[c.company_name,c.speaker,c.start_timestamp].filter(Boolean).map(escapeHTML).join(' · ');
-    return `<article class="source" id="source-${escapeHTML(scope)}-${escapeHTML(id)}"><div class="source-title"><span>[${escapeHTML(id)}] ${escapeHTML(c.company_name||'Conversation')}</span><span class="source-type">${type==='internal_note'?'Internal note':'Transcript'}</span></div><div class="source-ref">${who}</div><p class="source-quote">“${escapeHTML(c.quote||'')}”</p><div class="source-ref">Conversation: ${escapeHTML(c.conversation_id||'N/A')}</div></article>`;
+    return `<article class="source" id="source-${escapeHTML(scope)}-${escapeHTML(id)}"><div class="source-title"><span>[${escapeHTML(id)}] ${escapeHTML(c.company_name||'Conversation')}</span><span class="source-actions"><span class="source-type">${type==='internal_note'?'Internal note':'Transcript'}</span><button type="button" class="text-tool" data-copy-source="${i}" aria-label="Copy quotation ${escapeHTML(id)}">Copy quote</button></span></div><div class="source-ref">${who}</div><p class="source-quote">“${escapeHTML(c.quote||'')}”</p><div class="source-ref">Conversation: ${escapeHTML(c.conversation_id||'N/A')}</div></article>`;
   }).join('');
 }
+$('#sourceList').addEventListener('click',e=>{
+  const btn=e.target.closest('[data-copy-source]');if(!btn)return;
+  const source=currentSources[Number(btn.dataset.copySource)];if(source)copyText(source.quote||'',btn);
+});
 function pushAnswer(answer,meta={}){
   const el=document.createElement('article');el.className='msg assistant';
-  const scope=String(Date.now());el.innerHTML=safeMarkdown(answer,scope);
+  const scope=String(Date.now())+'-'+Math.random().toString(36).slice(2,6);
+  const toolbar=document.createElement('div');toolbar.className='msg-toolbar';
+  const heading=document.createElement('span');heading.className='result-label';heading.textContent='✦ Research result';
+  const actions=document.createElement('div');actions.className='message-tools';
+  const copy=document.createElement('button');copy.type='button';copy.className='text-tool';copy.textContent='Copy answer';copy.onclick=()=>copyText(cleanReportMarkdown(answer),copy);
+  const download=document.createElement('button');download.type='button';download.className='text-tool';download.textContent='Download .md';download.onclick=()=>downloadMarkdown(cleanReportMarkdown(answer));
+  actions.append(copy,download);toolbar.append(heading,actions);el.appendChild(toolbar);
+  const contents=document.createElement('div');contents.className='answer-content';contents.innerHTML=safeMarkdown(answer,scope);el.appendChild(contents);
   const coverage=meta.coverage||{};const texts=[];
   if(Number.isFinite(+coverage.matching))texts.push(`${coverage.matching} matching`);
   if(Number.isFinite(+coverage.examined))texts.push(`${coverage.examined} examined`);
@@ -147,11 +231,29 @@ function pushAnswer(answer,meta={}){
   if(texts.length){const d=document.createElement('div');d.className='message-meta';d.textContent='Research coverage · '+texts.join(' · ');el.appendChild(d);}
   $('#messages').appendChild(el);el.scrollIntoView({block:'end'});updateSources(getSources(meta),scope);
 }
+function createWorkingMessage(){
+  const el=document.createElement('div');el.className='msg assistant loading-card';el.setAttribute('role','status');
+  el.setAttribute('aria-label','AI research in progress');
+  el.innerHTML=`<div class="loading-head"><span class="loader-spinner" aria-hidden="true"></span><div><div class="working-title">Your AI agent is working on it…</div><div class="working-subtitle" data-working-caption>Finding relevant insights from your conversations</div></div></div><div class="loading-skeleton" aria-hidden="true"><span class="skeleton-line"></span><span class="skeleton-line"></span><span class="skeleton-line"></span></div><div class="loading-foot"><span>Researching and validating evidence</span><span class="working-elapsed">0s elapsed</span></div>`;
+  $('#messages').appendChild(el);el.scrollIntoView({block:'end'});
+  const start=Date.now();
+  const timer=window.setInterval(()=>{
+    if(!el.isConnected){window.clearInterval(timer);return;}
+    const seconds=Math.floor((Date.now()-start)/1000);
+    el.querySelector('.working-elapsed').textContent=`${seconds}s elapsed`;
+    const caption=el.querySelector('[data-working-caption]');
+    if(seconds>=35)caption.textContent='Still working — detailed reports can take longer';
+    else if(seconds>=12)caption.textContent='Your question is being processed; sources will appear with the answer';
+  },1000);
+  return {remove(){window.clearInterval(timer);el.remove();}};
+}
 function setAskBusy(value){busy=value;$('#askButton').disabled=value;$('#question').disabled=value;}
 async function ask(text){if(busy)return;const q=String(text??$('#question').value).trim();if(!q)return;if(q.length<3){pushAnswer("Please enter a question with at least 3 characters.");return;}if(q.length>1000){pushAnswer("Questions must be under 1,000 characters.");return;}
   $('#welcome')?.remove();$('#question').value='';pushUser(q);setAskBusy(true);
-  const load=document.createElement('div');load.className='msg assistant loading';load.textContent='Searching stored conversations and verifying sources…';$('#messages').appendChild(load);load.scrollIntoView({block:'end'});
-  try{const data=await sendAction('research.ask',{question:q,session_id:sessionId});
+  const load=createWorkingMessage();
+  const contextHint='Give a detailed, evidence-grounded answer. Explain causes, business impact and requested improvements when supported. Include related relevant requirements, objections, success criteria and next steps where evidenced; cite exact quotations. Do not invent facts or empty sections.';
+  const requestQuestion=$('#answerStyle').value==='detailed' && q.length+contextHint.length+2<=1000 ? q+'\n\n'+contextHint : q;
+  try{const data=await sendAction('research.ask',{question:requestQuestion,session_id:sessionId});
     load.remove();const report=(data.result&&typeof data.result==='object')?data.result:data;
     const answer=report.answer_markdown||report.answer||report.sections?.executive_summary;
     if(!answer)throw new Error('The research agent returned no answer.');pushAnswer(String(answer),report);
@@ -159,6 +261,20 @@ async function ask(text){if(busy)return;const q=String(text??$('#question').valu
 }
 $('#askForm').onsubmit=e=>{e.preventDefault();ask();};$('#question').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask();}});
 document.querySelectorAll('[data-question]').forEach(b=>b.onclick=()=>ask(b.dataset.question));
+
+// A UI-only representation of planned connectors; never requests login or claims to import data.
+const connectorDialog=$('#connectorDialog');
+$('#openConnect').onclick=()=>connectorDialog.showModal();
+$('#closeConnect').onclick=()=>connectorDialog.close();
+$('#dismissConnect').onclick=()=>connectorDialog.close();
+connectorDialog.addEventListener('click',e=>{if(e.target===connectorDialog)connectorDialog.close();});
+document.querySelectorAll('[data-connector]').forEach(button=>button.onclick=()=>{
+  document.querySelectorAll('[data-connector]').forEach(b=>b.classList.toggle('selected',b===button));
+  const name=button.dataset.connector;
+  $('#integrationPreview').replaceChildren();
+  const title=document.createElement('strong');title.textContent=name+' — integration concept';
+  $('#integrationPreview').append(title,document.createTextNode('In a live version, an authorized connection could import meeting transcripts, speakers, dates and sales notes into your conversation library. This portfolio demo does not connect accounts or fetch meetings. Use the manual form below instead.'));
+});
 
 $('#textFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;
   if(file.size>2*1024*1024){alert('Please choose a text file under 2 MB.');e.target.value='';return;}
